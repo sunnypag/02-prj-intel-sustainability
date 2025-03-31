@@ -110,9 +110,7 @@ section p {
   width: 300px; /* Fixed width for consistency */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center; /* Center-align content */
-  position: relative; /* Position relative for layering */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  overflow: hidden; /* Ensure content stays within the card */
 }
 
 .scroll-box li:hover {
@@ -125,37 +123,11 @@ section p {
   height: auto;
   border-radius: 5px; /* Rounded corners for images */
   margin-bottom: 10px;
-  transition: opacity 0.3s ease; /* Smooth fade-out effect */
-  position: relative; /* Position relative for layering */
-  z-index: 1; /* Ensure the image is behind the description */
-}
-
-.scroll-box img:hover {
-  opacity: 0.3; /* Fade the image when hovered */
 }
 
 .scroll-box p.description {
-  display: none; /* Hide the description by default */
-  position: absolute; /* Position absolute for layering */
-  top: 50%; /* Center the text vertically */
-  left: 50%; /* Center the text horizontally */
-  transform: translate(-50%, -50%); /* Adjust for perfect centering */
-  background-color: rgba(0, 113, 197, 0.9); /* Semi-transparent Intel Blue */
-  color: #ffffff; /* White text for contrast */
-  border-radius: 8px; /* Rounded corners */
-  padding: 15px; /* Add padding for better readability */
-  font-size: 1rem; /* Slightly larger font size */
-  width: 90%; /* Fit within the card */
-  text-align: center; /* Center-align the text */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  z-index: 2; /* Ensure the text is in front of the image */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth fade-in effect */
-}
-
-.scroll-box li:hover p.description {
-  display: block; /* Show the description when hovering over the image */
-  opacity: 1; /* Fade in the description */
+  font-size: 0.9rem; /* Smaller font for descriptions */
+  color: #555; /* Subtle text color */
 }
 
 /* Footer Section */
