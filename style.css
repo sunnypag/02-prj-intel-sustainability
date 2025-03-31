@@ -2,7 +2,7 @@
 body, h1, h2, h3, p, a {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Intel Clear', Arial, sans-serif; /* Use Intel-inspired fonts */
   color: #333;
 }
 
@@ -26,6 +26,7 @@ header {
   padding: 36px 18px; /* Increase padding by 20% for a larger header */
   font-size: 1.2em; /* Slightly increase font size for proportional scaling */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Intel Clear', Arial, sans-serif; /* Ensure header uses Intel-inspired font */
 }
 
 /* Define the gradient animation */
@@ -59,6 +60,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  font-family: 'Intel Clear', Arial, sans-serif; /* Ensure section uses Intel-inspired font */
 }
 
 section div {
@@ -88,6 +90,11 @@ section h2 {
 section h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  text-align: center; /* Center-align all h3 texts */
+  word-wrap: break-word; /* Break long words to fit within the card */
+  overflow-wrap: break-word; /* Ensure text wraps properly */
+  margin: 0 auto; /* Center the text block */
+  max-width: 100%; /* Ensure the text stays within the card's width */
 }
 
 section p {
@@ -97,7 +104,7 @@ section p {
 
 /* Scrollable Box Styling */
 .scroll-box {
-  background-color: #ffffff; /* White background for contrast */
+  background-color: #0071c5; /* Set background color to Intel Blue */
   border: 1px solid #ddd; /* Light border for separation */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -152,7 +159,7 @@ section p {
 }
 
 .scroll-box img:hover {
-  opacity: 0.3; /* Fade the image when hovered */
+  opacity: 1; /* Remove the opacity effect */
 }
 
 .scroll-box p.description {
@@ -208,7 +215,7 @@ section p {
 }
 
 .card h3 {
-  font-size: 1.2rem; /* Slightly larger font size for headings */
+  font-size: 1.0rem; /* Slightly larger font size for headings */
   color: #0071c5; /* Intel Blue for headings */
   margin-bottom: 10px; /* Add space below the heading */
 }
@@ -226,6 +233,7 @@ footer {
   padding: 15px 0;
   margin-top: 30px;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow above the footer */
+  font-family: 'Intel Clear', Arial, sans-serif; /* Ensure footer uses Intel-inspired font */
 }
 
 footer a {
