@@ -1,1 +1,153 @@
-/* Add your CSS here */
+/* General Reset */
+body, h1, h2, h3, p, a {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Body Styling */
+body {
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+  background-color: #0071c5;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+header img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1rem;
+}
+
+/* Timeline Section */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+section div {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+section h2 {
+  color: #0071c5;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Scrollable Box Styling */
+.scroll-box {
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ccc; /* Light border for visibility */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto;
+  padding: 10px;
+  width: 100%; /* Full width */
+  max-width: 1000px; /* Limit maximum width */
+  height: 250px; /* Fixed height for the box */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrolling */
+  white-space: nowrap; /* Prevent text wrapping for horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snapping */
+}
+
+.scroll-box ul {
+  display: flex; /* Arrange list items in a horizontal row */
+  gap: 20px; /* Add space between list items */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default bullet points */
+}
+
+.scroll-box li {
+  scroll-snap-align: center; /* Snap each item to the center of the scroll container */
+  background-color: #ffffff; /* White background for each item */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  width: 300px; /* Fixed width for consistency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center-align content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.scroll-box li:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.scroll-box img {
+  max-width: 100%; /* Ensure images fit within the container */
+  height: auto;
+  border-radius: 5px; /* Rounded corners for images */
+  margin-bottom: 10px;
+}
+
+.scroll-box p.description {
+  font-size: 0.9rem; /* Smaller font for descriptions */
+  color: #555; /* Subtle text color */
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #0071c5;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
