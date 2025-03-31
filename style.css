@@ -8,30 +8,35 @@ body, h1, h2, h3, p, a {
 
 /* Body Styling */
 body {
-  background-color: #f4f4f4;
+  background-color: #eef7fc; /* Light blue background for a clean look */
   line-height: 1.6;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 /* Header Section */
 header {
-  background-color: #0071c5;
+  background-color: #0071c5; /* Intel Blue */
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 30px 15px; /* Add more padding for a spacious layout */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 header img {
   max-width: 150px;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Add more space below the logo */
 }
 
 header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem; /* Increase font size for emphasis */
+  margin-bottom: 15px;
 }
 
 header p {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Slightly larger font size for readability */
 }
 
 /* Timeline Section */
@@ -78,70 +83,137 @@ section p {
 
 /* Scrollable Box Styling */
 .scroll-box {
-  background-color: #f9f9f9; /* Light background for contrast */
-  border: 1px solid #ccc; /* Light border for visibility */
+  background-color: #ffffff; /* White background for contrast */
+  border: 1px solid #ddd; /* Light border for separation */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin: 20px auto;
-  padding: 10px;
-  width: 100%; /* Full width */
-  max-width: 1000px; /* Limit maximum width */
-  height: 250px; /* Fixed height for the box */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  overflow-y: hidden; /* Hide vertical scrolling */
-  white-space: nowrap; /* Prevent text wrapping for horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Enable horizontal scroll snapping */
+  margin: 30px auto; /* Add more margin for spacing */
+  padding: 20px; /* Increase padding for better readability */
+  width: 100%;
+  max-width: 1000px;
+  height: 400px; /* Increase height to accommodate larger cards */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
 }
 
 .scroll-box ul {
-  display: flex; /* Arrange list items in a horizontal row */
-  gap: 20px; /* Add space between list items */
+  display: flex;
+  gap: 30px; /* Add more space between list items */
   padding: 0;
   margin: 0;
-  list-style: none; /* Remove default bullet points */
+  list-style: none;
+  justify-content: space-between; /* Ensure even spacing between cards */
 }
 
 .scroll-box li {
-  scroll-snap-align: center; /* Snap each item to the center of the scroll container */
-  background-color: #ffffff; /* White background for each item */
-  border: 1px solid #ddd; /* Light border for separation */
-  border-radius: 8px; /* Rounded corners */
+  scroll-snap-align: center;
+  background-color: #f9f9f9; /* Light gray background for cards */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px; /* Increase padding for better spacing */
+  width: 22%; /* Adjust width so four cards fit side by side */
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.scroll-box li:hover {
+  transform: scale(1.1); /* Slightly larger scale on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background-color: #e6f2fa; /* Light blue background on hover */
+}
+
+.scroll-box img {
+  max-width: 1000%; /* Ensure images fit within the container */
+  height: auto; /* Restore original height to maintain aspect ratio */
+  /* Ensure the entire image is visible */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease; /* Smooth fade-out effect */
+}
+
+.scroll-box img:hover {
+  opacity: 0.3; /* Fade the image when hovered */
+}
+
+.scroll-box p.description {
+  display: none; /* Hide the description by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 113, 197, 0.9); /* Semi-transparent Intel Blue */
+  color: #ffffff;
+  border-radius: 8px;
   padding: 15px;
-  width: 300px; /* Fixed width for consistency */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 1rem;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-box li:hover p.description {
+  display: block;
+  opacity: 1; /* Fade in the description */
+}
+
+/* Card Styling */
+.card {
+  background-color: #f9f9f9; /* Light gray background for cards */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding for spacing */
+  width: 1000px; /* Fixed width for consistency */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   text-align: center; /* Center-align content */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-.scroll-box li:hover {
+.card:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.scroll-box img {
-  max-width: 100%; /* Ensure images fit within the container */
-  height: auto;
-  border-radius: 5px; /* Rounded corners for images */
-  margin-bottom: 10px;
+.card img {
+  max-width: 100%; /* Ensure images fit within the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 15px; /* Add space below the image */
 }
 
-.scroll-box p.description {
-  font-size: 0.9rem; /* Smaller font for descriptions */
+.card h3 {
+  font-size: 1.2rem; /* Slightly larger font size for headings */
+  color: #0071c5; /* Intel Blue for headings */
+  margin-bottom: 10px; /* Add space below the heading */
+}
+
+.card p.description {
+  font-size: 0.9rem; /* Smaller font size for descriptions */
   color: #555; /* Subtle text color */
 }
 
 /* Footer Section */
 footer {
-  background-color: #333;
+  background-color: #0071c5; /* Intel Blue */
   color: white;
   text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
+  padding: 15px 0;
+  margin-top: 30px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow above the footer */
 }
 
 footer a {
-  color: #0071c5;
+  color: #ffffff;
   text-decoration: none;
+  font-weight: bold;
 }
 
 footer a:hover {
@@ -149,5 +221,5 @@ footer a:hover {
 }
 
 footer p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
