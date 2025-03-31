@@ -18,11 +18,24 @@ body {
 
 /* Header Section */
 header {
-  background: linear-gradient(90deg, #005b99, #0071c5); /* Add a gradient from dark to light Intel Blue */
+  background: linear-gradient(90deg, #005b99, #0071c5); /* Initial gradient */
+  background-size: 200% 200%; /* Expand background for animation */
+  animation: gradient-animation 5s infinite alternate; /* Apply animation */
   color: white;
   text-align: center;
-  padding: 30px 15px; /* Add more padding for a spacious layout */
+  padding: 36px 18px; /* Increase padding by 20% for a larger header */
+  font-size: 1.2em; /* Slightly increase font size for proportional scaling */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Define the gradient animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%; /* Start position */
+  }
+  100% {
+    background-position: 100% 50%; /* End position */
+  }
 }
 
 header img {
@@ -31,12 +44,13 @@ header img {
 }
 
 header h1 {
-  font-size: 2.5rem; /* Increase font size for emphasis */
+  font-size: 3rem; /* Increase font size by 20% for emphasis */
   margin-bottom: 15px;
 }
 
 header p {
-  font-size: 1.2rem; /* Slightly larger font size for readability */
+  font-size: 1.44rem; /* Increase font size by 20% for readability */
+  margin-bottom: 15px;
 }
 
 /* Timeline Section */
